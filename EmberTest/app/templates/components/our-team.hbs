@@ -1,0 +1,49 @@
+<section id="team">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-2 text-center"></div>
+			<div class="col-lg-8">
+				<div class= "text-center">
+					<h2 class="sec-heading">Our Team</h2>
+					<p class="section-subheading text-muted">As you’re likely aware, every bit of your website or blog needs content development at one point or another. However, I find that many people get stuck when it comes to developing content for their business’s service and product pages.</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			{{#each teamMembers as |tmember|}}
+			<div class="col-lg-3 col-md-3 col-sm-6 text-center">
+				<div class="team-member">
+					<img src="{{tmember.pic}}" class="img-responsive img-circle" alt="">
+						<h3>{{tmember.name}}</h3>
+						<h4>{{tmember.desig}}</h4>
+						<p class="section-subheading">{{tmember.info}}</p>
+						<ul class="list-inline social-buttons">
+							<li>
+								<a><i class="fa fa-facebook"/></a>
+							</li>
+							<li>
+								<a><i class="fa fa-twitter"/></a>
+							</li>
+							<li>
+								<a><i class="fa fa-linkedin"/></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			{{/each}}
+		</div>
+	</div>
+</section>
+<aside class="clients">
+	<div class="container text-center">
+		<ul class="list-inline">
+			{{#each companies as |sponserclient|}}
+				<li>
+					<a>
+						<img src="{{sponserclient.client_logo}}" class="image-responsive img-centered" alt="">
+					</a>
+				</li>
+			{{/each}}
+		</ul>
+	</div>
+</aside>
